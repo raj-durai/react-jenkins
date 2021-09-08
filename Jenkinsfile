@@ -7,7 +7,7 @@ pipeline {
             echo 'Installing Dependencies...'
             sh "npm install"
             echo 'Building the Application...'
-            sh "npm build"
+            sh "npm run build"
         }
     }
     stage('Test') {
