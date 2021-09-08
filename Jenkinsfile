@@ -5,15 +5,15 @@ pipeline {
     stage('Build') {
         steps {
             echo 'Installing Dependencies...'
-            sh "yarn install"
+            sh "npm install"
             echo 'Building the Application...'
-            sh "yarn build"
+            sh "npm build"
         }
     }
     stage('Test') {
         steps {
             echo 'Testing the Application...'
-            sh "yarn test"
+            sh "npm test"
         }
     }
     stage('Deploy') {
