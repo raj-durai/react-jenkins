@@ -4,6 +4,7 @@ pipeline {
     stage('Build') {
         steps {
             echo 'Build the Application...'
+            sh "pwd"
             yarn install
         }
     }
