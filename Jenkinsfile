@@ -6,13 +6,13 @@ pipeline {
         steps {
             echo 'Build the Application...'
             sh "pwd"
-            npm install
+            sh "npm install"
         }
     }
     stage('Test') {
         steps {
             echo 'Test the Application...'
-            npm test
+            sh "npm test"
         }
     }
     stage('Deploy') {
