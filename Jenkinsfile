@@ -4,15 +4,16 @@ pipeline {
   stages {
     stage('Build') {
         steps {
-            echo 'Build the Application...'
-            sh "pwd"
-            sh "npm install"
+            echo 'Installing Dependencies...'
+            sh "yarn install"
+            echo 'Building the Application...'
+            sh "yarn build"
         }
     }
     stage('Test') {
         steps {
-            echo 'Test the Application...'
-            sh "npm test"
+            echo 'Testing the Application...'
+            sh "yarn test"
         }
     }
     stage('Deploy') {
