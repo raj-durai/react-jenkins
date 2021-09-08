@@ -5,13 +5,13 @@ pipeline {
         steps {
             echo 'Build the Application...'
             sh "pwd"
-            yarn install
+            npm install
         }
     }
     stage('Test') {
         steps {
             echo 'Test the Application...'
-            yarn test
+            npm test
         }
     }
     stage('Deploy') {
